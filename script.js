@@ -4,12 +4,13 @@ const specialChars = ["%","+","-","/","*","="];
 let output = "";
 
 const calculate = (btnValue) => {
+    console.log(btnValue);
     if(btnValue === "=" && output !== "")
     output = eval(output.replace("%","/100"));
     else if(btnValue === "AC")
     output = "";
     else if(btnValue === "DEL")
-    output = output.toString.slice(0,-1);
+    output = output.toString().slice(0, -1);
     else{
         if(output === "" && btnValue.includes(specialChars) )
         return;
