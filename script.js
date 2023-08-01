@@ -4,7 +4,6 @@ const specialChars = ["%","+","-","/","*","="];
 let output = "";
 
 const calculate = (btnValue) => {
-    console.log(btnValue);
     if(btnValue === "=" && output !== "")
     output = eval(output.replace("%","/100"));
     else if(btnValue === "AC")
